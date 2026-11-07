@@ -1,0 +1,35 @@
+:root{--primary:#2563eb;--bg:#f8fafc;--text:#1e293b;--mark:#f59e0b;--muted:#64748b;--line:#dbe3ee;
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--mono:ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;font-size:1.125rem}
+.slide{position:relative;max-width:56rem;margin:0 auto;padding:3rem 1.5rem 4rem;border-bottom:1px solid var(--line)}
+.js body{overflow:hidden}
+.js .slide{display:none;min-height:100vh;border:0;padding-top:5vh;overflow-y:auto;max-height:100vh}
+.js .slide.active{display:block}
+h1{font-size:clamp(2rem,6vw,3.25rem);line-height:1.2;margin:.3em 0}
+h2{font-size:clamp(1.4rem,4vw,2rem);margin:0 0 1rem;padding-left:.75rem;border-left:6px solid var(--primary)}
+ul,ol{padding-left:1.4rem}li{margin:.5rem 0}
+.js .cover.active{display:flex;flex-direction:column;justify-content:center}
+.course{color:var(--primary);font-weight:700;margin:0}
+.hint,.source{color:var(--muted);font-size:.875rem}
+.source{position:absolute;right:1.5rem;bottom:1.25rem;font-family:var(--mono)}
+.must-know{background:#fffbeb}
+.must-know h2{border-left-color:var(--mark)}
+.must-know li::marker{color:var(--mark);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:1rem}
+th,td{border:1px solid var(--line);padding:.6rem .8rem;text-align:left}
+th{background:#eaf1fe}
+code{font-family:var(--mono);background:#eaf1fe;padding:.1em .35em;border-radius:4px}
+details{border:1px solid var(--line);border-radius:6px;padding:.6rem 1rem;margin:.75rem 0;background:#fff}
+summary{cursor:pointer;font-weight:600}
+a{color:var(--primary)}
+.counter{position:fixed;right:1rem;bottom:.75rem;font-family:var(--mono);font-size:.8rem;color:var(--muted);background:var(--bg);padding:.1rem .5rem;border-radius:4px}
+.nav{position:fixed;left:1rem;bottom:.6rem;display:flex;gap:.5rem}
+.nav button{font:inherit;font-size:.9rem;padding:.25rem .8rem;border:1px solid var(--primary);background:#fff;color:var(--primary);border-radius:6px;cursor:pointer}
+.nav button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+.subject{margin:2rem 0}.subject h2{margin-bottom:.75rem}
+.week-list{list-style:none;padding:0}
+.week-list a{display:block;padding:.6rem .9rem;border:1px solid var(--line);border-radius:6px;background:#fff;text-decoration:none}
+.week-list a:hover{border-color:var(--primary)}
+.page{max-width:44rem;margin:0 auto;padding:3rem 1.5rem}
+@media print{.counter,.nav{display:none}.js .slide{display:block;max-height:none;min-height:0}.js body{overflow:visible}.slide{break-after:page}}
